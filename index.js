@@ -28,7 +28,6 @@ function subsetfonts(){
 			chars = unique(chars.concat(body.text().split('')));
 		})
 		var include = chars.join('').replace('\n','').replace(' ','');
-		console.log(include);
 		cssFiles.forEach(function(file){
 			var css = files[file].contents.toString();
 			css = css.replace('fonts.googleapis.com/css?','fonts.googleapis.com/css?text='+encodeURIComponent(include)+'&')
