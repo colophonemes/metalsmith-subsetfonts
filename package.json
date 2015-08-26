@@ -6,10 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/colophonemes/metalsmith-subsetfonts.git"
+  },
   "keywords": [
     "fonts",
     "metalsmith",
-    "subset"
+    "subset",
+    "google fonts"
   ],
   "author": "Sam Deere / colophonemes <dev@colophonemes.com>",
   "license": "ISC",
