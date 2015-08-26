@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-subsetfonts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Subset your webfonts to only use glyphs actually used by your website",
   "main": "index.js",
   "scripts": {
