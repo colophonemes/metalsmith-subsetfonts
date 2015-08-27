@@ -28,11 +28,10 @@ function subsetfonts(){
 			chars = unique(chars.concat(body.text().split('')));
 		})
 		chars.sort();
-		var include = chars.join('').replace('\n','').replace(' ','').replace(')','').replace('(','');
-		console.log(include);
+		var include = encodeURIComponent(chars.join('').replace('\n','')).replace(')','%29').replace('(','%28').replace("'","%27").replace('"','%22');
 		cssFiles.forEach(function(file){
 			var css = files[file].contents.toString();
-			css = css.replace('fonts.googleapis.com/css?','fonts.googleapis.com/css?text='+encodeURIComponent(include)+'&')
+			css = css.replace('fonts.googleapis.com/css?','fonts.googleapis.com/css?text='+include+'&')
 			files[file].contents = css;
 		})
 		done();
